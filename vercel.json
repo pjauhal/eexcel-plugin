@@ -1,4 +1,6 @@
 {
+  "outputDirectory": "dist",
+  "buildCommand": "mkdir -p dist && cp manifest.xml taskpane.html vercel.json dist/ && cp -r src dist/",
   "headers": [
     {
       "source": "/(.*)",
