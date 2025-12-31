@@ -44,9 +44,9 @@
     </Hosts>
     <Resources>
       <bt:Urls>
-        <bt:Url id="Funcjs" DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.js" />
+        <bt:Url id="Funcjs" DefaultValue="https://eexcel-plugin.vercel.app/asset/functions.js" />
         <bt:Url id="Funchtml" DefaultValue="https://eexcel-plugin.vercel.app/asset/mypage.html" />
-        <bt:Url id="Funcmeta" DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.json" />
+        <bt:Url id="Funcmeta" DefaultValue="https://eexcel-plugin.vercel.app/asset/functions.json" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="Funcns" DefaultValue="TEST" />
