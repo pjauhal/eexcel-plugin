@@ -1,17 +1,19 @@
 /* global CustomFunctions */
 
-// Load the Custom Functions runtime
+// Load the Custom Functions runtime (required)
 importScripts(
   "https://appsforoffice.microsoft.com/lib/1/custom-functions-runtime.js"
 );
 
-function getrandom(x) {
-  if (x === "phone") {
+function getrandom(dataType) {
+  if (dataType === "phone") {
     return "5432167890";
-  } else if (x === "zip") {
+  }
+  if (dataType === "zip") {
     return "12345";
   }
   return "not supported";
 }
 
+// Register the function
 CustomFunctions.associate("RANDOM", getrandom);

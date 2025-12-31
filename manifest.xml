@@ -1,56 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp
-          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
-          xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
-          xsi:type="TaskPaneApp">
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+
+  <!-- Basic information -->
   <Id>bdb0c148-86d1-4789-ae6a-3e5fb97a61b5</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Tsuyoshi Matsuzaki</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="My test functions" />
-  <Description DefaultValue="Generate random sample data"/>
+  <DisplayName DefaultValue="My Test Custom Functions" />
+  <Description DefaultValue="Generate random sample data (phone, zip)" />
+
+  <!-- Excel host -->
   <Hosts>
     <Host Name="Workbook" />
   </Hosts>
+
+  <!-- Required APIs -->
   <Requirements>
     <Sets DefaultMinVersion="1.1">
       <Set Name="CustomFunctionsRuntime" MinVersion="1.1"/>
     </Sets>
   </Requirements>
+
+  <!-- Task pane page (must exist even if empty) -->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/mypage.html" />
+    <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/asset/mypage.html" />
   </DefaultSettings>
+
   <Permissions>ReadWriteDocument</Permissions>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+
+  <!-- Version overrides -->
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+    xsi:type="VersionOverridesV1_0">
+
     <Hosts>
       <Host xsi:type="Workbook">
         <AllFormFactors>
+
+          <!-- Custom Functions declaration -->
           <ExtensionPoint xsi:type="CustomFunctions">
             <Script>
-              <SourceLocation resid="Funcjs" />
+              <SourceLocation resid="FuncJs" />
             </Script>
             <Page>
-              <SourceLocation resid="Funchtml"/>
+              <SourceLocation resid="FuncHtml" />
             </Page>
             <Metadata>
-              <SourceLocation resid="Funcmeta"/>
+              <SourceLocation resid="FuncMeta" />
             </Metadata>
-            <Namespace resid="Funcns" />
+            <Namespace resid="FuncNamespace" />
           </ExtensionPoint>
-        </AllFormFactors>        
+
+        </AllFormFactors>
       </Host>
     </Hosts>
+
+    <!-- Resources -->
     <Resources>
       <bt:Urls>
-        <bt:Url id="Funcjs" DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.js" />
-        <bt:Url id="Funchtml" DefaultValue="https://eexcel-plugin.vercel.app/asset/mypage.html" />
-        <bt:Url id="Funcmeta" DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.json" />
+        <bt:Url id="FuncJs"
+                DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.js" />
+        <bt:Url id="FuncHtml"
+                DefaultValue="https://eexcel-plugin.vercel.app/asset/mypage.html" />
+        <bt:Url id="FuncMeta"
+                DefaultValue="https://eexcel-plugin.vercel.app/asset/myfunc.json" />
       </bt:Urls>
+
       <bt:ShortStrings>
-        <bt:String id="Funcns" DefaultValue="TEST" />
+        <bt:String id="FuncNamespace" DefaultValue="TEST" />
       </bt:ShortStrings>
     </Resources>
+
   </VersionOverrides>
 </OfficeApp>
