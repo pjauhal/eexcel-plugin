@@ -1,21 +1,9 @@
 {
   "functions": [
     {
-      "id": "GETRANDOMDATA",
-      "name": "GETRANDOMDATA",
-      "description": "Create various sample data (phone, zip)",
-      "result": {
-        "type": "string",
-        "dimensionality": "scalar"
-      },
-      "parameters": [
-        {
-          "name": "dataType",
-          "description": "Which type of data (\"phone\" or \"zip\")",
-          "type": "string",
-          "dimensionality": "scalar"
-        }
-      ]
+      "id": "HELLO",
+      "name": "HELLO",
+      "result": { "type": "string" }
     }
   ]
 }
