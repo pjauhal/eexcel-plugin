@@ -1,9 +1,9 @@
 {
   "functions": [
     {
-      "id": "RANDOM",
-      "name": "RANDOM",
-      "description": "Create various random data (phone, zip)",
+      "id": "GETRANDOMDATA",
+      "name": "GETRANDOMDATA",
+      "description": "Create various sample data (phone, zip)",
       "result": {
         "type": "string",
         "dimensionality": "scalar"

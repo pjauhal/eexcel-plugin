@@ -36,7 +36,11 @@
   <!-- Version overrides -->
   <VersionOverrides
     xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
-    xsi:type="VersionOverridesV1_0">
+    xsi:type="VersionOverridesV1_1">
+
+    <Runtimes>
+      <Runtime resid="FuncHtml" lifetime="long" />
+    </Runtimes>
 
     <Hosts>
       <Host xsi:type="Workbook">
