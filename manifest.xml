@@ -6,12 +6,12 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Excel Custom Functions" />
   <Description DefaultValue="A sample add-in with custom functions." />
-  <IconUrl DefaultValue="https://eexcel-plugin-2cge.vercel.app/assets/icon.png" />
-  <HighResolutionIconUrl DefaultValue="https://eexcel-plugin-2cge.vercel.app/assets/hi-res-icon.png" />
+  <IconUrl DefaultValue="https://eexcel-plugin.vercel.app/assets/icon.png" />
+  <HighResolutionIconUrl DefaultValue="https://eexcel-plugin.vercel.app/assets/hi-res-icon.png" />
   <SupportUrl DefaultValue="https://www.contoso.com/help" />
 
   <AppDomains>
-    <AppDomain>https://eexcel-plugin-2cge.vercel.app</AppDomain>
+    <AppDomain>https://eexcel-plugin.vercel.app</AppDomain>
   </AppDomains>
 
   <Hosts>
@@ -19,7 +19,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://eexcel-plugin-2cge.vercel.app/taskpane.html" />
+    <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/taskpane.html" />
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -36,13 +36,13 @@
           <AllFormFactors>
             <ExtensionPoint xsi:type="CustomFunctions">
               <Script>
-                <SourceLocation DefaultValue="https://eexcel-plugin-2cge.vercel.app/src/functions/functions.js" />
+                <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/src/functions/functions.js" />
               </Script>
               <Page>
-                <SourceLocation DefaultValue="https://eexcel-plugin-2cge.vercel.app/taskpane.html" />
+                <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/taskpane.html" />
               </Page>
               <Metadata>
-                <SourceLocation DefaultValue="https://eexcel-plugin-2cge.vercel.app/src/functions/functions.json" />
+                <SourceLocation DefaultValue="https://eexcel-plugin.vercel.app/src/functions/functions.json" />
               </Metadata>
             </ExtensionPoint>
           </AllFormFactors>
