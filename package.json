@@ -1,0 +1,20 @@
+{
+  "name": "excel-plugin",
+  "version": "1.0.0",
+  "description": "A sample Office.js project with custom functions.",
+  "main": "src/functions/functions.js",
+  "scripts": {
+    "start": "npx office-addin-debugging start manifest.xml --app \"Microsoft Excel\" --dev-server \"http-server -p 3000 -S -C localhost.pem -K localhost-key.pem --cors\"",
+    "start-plugin": "npx office-addin-debugging start manifest.xml",
+    "stop": "npx office-addin-debugging stop manifest.xml",
+    "serve": "http-server -p 3000 -S -C localhost.pem -K localhost-key.pem --cors",
+    "build": "echo 'Static files ready for deployment'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "office-addin-debugging": "^6.0.6"
+  },
+  "author": "",
+  "license": "MIT"
+}

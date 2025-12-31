@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Office.js project",
+			"type": "shell",
+			"command": "npx office-addin-debugging start manifest.xml",
+			"args": [],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

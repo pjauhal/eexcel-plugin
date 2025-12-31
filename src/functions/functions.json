@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/office-js/custom-functions.schema.json",
+  "id": "12345678-1234-1234-1234-123456789abc",
+  "functions": [
+    {
+      "id": "ADD_NUMBERS",
+      "name": "ADD_NUMBERS",
+      "description": "Adds two numbers.",
+      "parameters": [
+        {
+          "name": "first",
+          "description": "The first number.",
+          "type": "number",
+          "required": true
+        },
+        {
+          "name": "second",
+          "description": "The second number.",
+          "type": "number",
+          "required": true
+        }
+      ],
+      "result": {
+        "type": "number",
+        "dimensionality": "scalar"
+      }
+    }
+  ]
+}

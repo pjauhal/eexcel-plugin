@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>12345678-1234-1234-1234-123456789abc</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>My Company</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Excel Custom Functions" />
+  <Description DefaultValue="A sample add-in with custom functions." />
+  <IconUrl DefaultValue="https://bumpy-cups-begin.loca.lt/assets/icon.png" />
+  <HighResolutionIconUrl DefaultValue="https://bumpy-cups-begin.loca.lt/assets/hi-res-icon.png" />
+  <SupportUrl DefaultValue="https://www.contoso.com/help" />
+
+  <AppDomains>
+    <AppDomain>https://bumpy-cups-begin.loca.lt</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://bumpy-cups-begin.loca.lt/taskpane.html" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides>
+    <VersionOverride xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <Sets>
+          <Set Name="CustomFunctionsRuntime" MinVersion="1.1" />
+        </Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="Workbook">
+          <AllFormFactors>
+            <ExtensionPoint xsi:type="CustomFunctions">
+              <Script>
+                <SourceLocation DefaultValue="https://bumpy-cups-begin.loca.lt/src/functions/functions.js" />
+              </Script>
+              <Page>
+                <SourceLocation DefaultValue="https://bumpy-cups-begin.loca.lt/taskpane.html" />
+              </Page>
+              <Metadata>
+                <SourceLocation DefaultValue="https://bumpy-cups-begin.loca.lt/src/functions/functions.json" />
+              </Metadata>
+            </ExtensionPoint>
+          </AllFormFactors>
+        </Host>
+      </Hosts>
+    </VersionOverride>
+  </VersionOverrides>
+</OfficeApp>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel Custom Functions</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script>
+        Office.initialize = function (reason) {
+            // Office.js is ready
+            console.log('Office.js initialized 2');
+        };
+    </script>
+    <style>
+        body {
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Excel Custom Functions Add-in</h1>
+    <p>This add-in provides custom functions for Excel.</p>
+    <p>Use =ADD_NUMBERS(first, second) in a cell to test.</p>
+</body>
+</html>
