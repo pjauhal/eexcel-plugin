@@ -8,7 +8,7 @@
     "start-plugin": "npx office-addin-debugging start manifest.xml",
     "stop": "npx office-addin-debugging stop manifest.xml",
     "serve": "http-server -p 3000 -S -C localhost.pem -K localhost-key.pem --cors",
-    "build": "mkdir -p dist && cp manifest.xml taskpane.html vercel.json dist/ && cp -r src dist/",
+    "build": "mkdir -p dist && cp manifest.xml taskpane.html vercel.json dist/ && cp -r asset dist/",
     "deploy": "vercel --prod"
   },
   "dependencies": {

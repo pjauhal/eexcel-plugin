@@ -1,0 +1,21 @@
+{
+  "functions": [
+    {
+      "id": "RANDOM",
+      "name": "RANDOM",
+      "description": "Create various random data (phone, zip)",
+      "result": {
+        "type": "string",
+        "dimensionality": "scalar"
+      },
+      "parameters": [
+        {
+          "name": "type of data",
+          "description": "Which type of data (\"phone\" or \"zip\")",
+          "type": "string",
+          "dimensionality": "scalar"
+        }
+      ]
+    }
+  ]
+}
