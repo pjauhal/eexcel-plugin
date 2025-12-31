@@ -10,7 +10,7 @@
       },
       "parameters": [
         {
-          "name": "type of data",
+          "name": "dataType",
           "description": "Which type of data (\"phone\" or \"zip\")",
           "type": "string",
           "dimensionality": "scalar"
