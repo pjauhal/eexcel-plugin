@@ -1,3 +1,5 @@
+import "https://appsforoffice.microsoft.com/lib/1/custom-functions-runtime.js";
+
 function getrandom(x) {
   if (x == "phone") {
     return "54321";
